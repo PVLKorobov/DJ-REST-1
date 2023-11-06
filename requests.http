@@ -1,0 +1,32 @@
+# примеры запросов
+
+@base_url = http://localhost:8000/smart_home
+
+# список всех датчиков
+GET {{base_url}}/temp/sensors/
+
+###
+
+# получение информации о датчике с id=1
+GET {{base_url}}/temp/sensors/1/
+
+###
+
+# добавление датчика
+POST {{base_url}}/temp/sensors/name/description/
+
+###
+
+# изменение информации о датчике с id=1
+PATCH {{base_url}}/temp/sensors/1/name1/description1/
+
+###
+
+# удаление датчика с id=1
+DELETE {{base_url}}/temp/sensors/1/
+
+###
+
+# заполнение бд тестовыми данными
+
+POST {{base_url}}/temp/sensors/debug/fill/
